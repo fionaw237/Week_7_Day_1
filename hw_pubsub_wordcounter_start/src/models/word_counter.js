@@ -14,7 +14,8 @@ WordCounter.prototype.bindEvents = function(){
 
 WordCounter.prototype.countWords = function(words){
   word_array = words.split(' ');
-  return word_array.length;
+  word_array = word_array.filter(word => word.length > 0)
+  return word_array.length
 }
 
 module.exports = WordCounter;
